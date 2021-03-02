@@ -48,7 +48,8 @@ print(ma_liste)
 # concernant les copies des listes (dont les sous-listes) voir cours
 # C:\Users\LRCOM\Documents\Laurent\Python\Tuto@\MOOC\Module5_Sequences : Cours17_Listes&Comprehension&Copie
 
-""" Accès aux données et découpage en tranches (slicing) """
+""" Accès aux données et découpage en tranches (slicing) 
+Cours complémentaire sur les slices : https://zestedesavoir.com/tutoriels/582/les-slices-en-python/"""
 ma_liste = [325, 2, 32.7565, 5, 329, 330]
 print(ma_liste[:])  # affichage de toutes les composantes
 print(ma_liste[0])  # accès du 1er composant du tuple
