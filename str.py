@@ -68,7 +68,8 @@ citation = "They told me I was gone"
 print(create_message(personnage, citation))
 print(create_message_bis(personnage, citation))
 
-""" Accès aux données et découpage en tranches (slicing) """
+""" Accès aux données et découpage en tranches (slicing) 
+Cours complémentaire sur les slices : https://zestedesavoir.com/tutoriels/582/les-slices-en-python/"""
 print(ma_str[:])  # affichage de toutes les composantes
 print(ma_str[0])  # accès du 1er composant du tuple
 print(ma_str[1:3])  # la composante d'indice 3 est exclue ce qui revient à ma_str[1:3[
