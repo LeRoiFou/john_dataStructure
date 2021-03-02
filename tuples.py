@@ -34,7 +34,8 @@ for i, element in enumerate(mon_tup):  # énumération des éléments du tuples
 for element_mon_tup, element_mon_tup_bis in zip(mon_tup, mon_tup_bis):  # regroupage de différents tuples
     print(element_mon_tup_bis, ": ", element_mon_tup)
 
-""" Accès aux données et découpage en tranches (slicing) """
+""" Accès aux données et découpage en tranches (slicing) 
+Cours complémentaire sur les slices : https://zestedesavoir.com/tutoriels/582/les-slices-en-python/"""
 print(mon_tup[:])  # affichage de toutes les composantes
 print(mon_tup[0])  # accès du 1er composant du tuple
 print(mon_tup[1:3])  # la composante d'indice 3 est exclue ce qui revient à mon_tup[1:3[
