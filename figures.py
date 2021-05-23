@@ -19,3 +19,8 @@ print(type(y))
 # y est arrondi au centième et z est arrondi à l'unité
 z = x / y
 print("Le résultat de 'x/y' avec x =", x, 'et y =', round(y, 3), 'donne pour résultat ', round(z))
+
+# conversion d'une opération de str en chiffres avec la fonction native eval()
+my_str = "1 + 2"
+result = eval(my_str)
+print(result)
