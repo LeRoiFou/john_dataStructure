@@ -45,6 +45,11 @@ print(ma_str.isalnum())  # booléen : true si la str ne contient que des caract�
 print(ma_str.isalpha())  # booléen : true si la str ne contient que des caractères alphabétiques
 for i, element in enumerate(ma_str):  # énumération des éléments de la str
     print("Pour le caractère n°", (i + 1), "l'élément est :", element)
+my_str = "Ceci/est/un/test"
+my_split = (my_str.split("/")) # séparateur : affichage en liste avec suppression du "/"
+print(my_split)
+my_new_str = "_".join(my_split) # concaténation de la liste ci-avant avec le "_"
+print(my_new_str)
 
 """ Mise en forme """
 print("Essai 1 \nEssai 2 \nEssai 3")  # saut de page
@@ -53,19 +58,27 @@ print("Ceci est un test :" + " 1, 2, 3 !")  # concaténation
 print("Essai !" * 5)  # répétition
 print("x" * 10, "+" * 10, "x" * 10, sep="|")  # séparateur
 print("C'est vraiment \"dommage !\"")  # guillemets dans un texte
-
+# les largeurs fixes :
+comptes = [
+ ('Apollin', 'Dupont', 127),
+ ('Myrtille', 'Lamartine', 25432),
+ ('Prune', 'Soc', 827465),
+]
+for prenom, nom, solde in comptes:
+    # < : affichage à gauche de la console
+    # ^ : affichage centré de la console
+    # > : affichage à droite de la console
+    print(f"{prenom:<10} -- {nom:^12} -- {solde:>8} €")
 
 def create_message(character, quote):  # fusion de deux chaînes de caractères en recourant à une fonction
     res = "{} a dit : {}".format(character, quote)
     return res
-
 
 def create_message_bis(character, quote):  # autre solution en recourant cette fois-ci à la fonction "f-strings"
     """La fonction f_strings est préconisée compte tenu de sa simplicité par rapport à la fonction ci-avant.
     Pour afficher un réel avec par exemple 2 décimales, il suffit d'effectuer les instructions suivantes :
     f"{instruction}:.2f" """
     return f"{character} a dit : {quote}"
-
 
 personnage = "Tyler Joseph"
 citation = "They told me I was gone"
