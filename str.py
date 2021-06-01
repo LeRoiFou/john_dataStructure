@@ -11,54 +11,58 @@ Date : 01-09-2020
 
 """ Création de str qui sont encadrées par des 'texte' """
 ma_str = "   salut ! la forme 17 ?   "
-long_t = "******************" \
-         "* Bon anniversaire ! *" \
-         "********************"  # chaîne de caractères sur plusieurs lignes
-print(long_t)
+print(f"ma_str : {ma_str}")
 
-""" Méthodes pour les str """
-print(type(ma_str))  # type de la variable
-print(len(ma_str))  # longueur de la str
-print(min(ma_str))  # plus petite valeur de la str
-print(max(ma_str))  # plus grande valeur de la str
-print(ma_str.index("a"))  # 1er n° d'indice de la valeur recherchée
-print(ma_str.lower())  # minuscules
-print(ma_str.upper())  # majuscules
-print(ma_str.find("?"))  # n° d'indice de la valeur recherchée
-print(ma_str.find("a", 3))  # recherche à partir de l'indice 3 le n° d'indice de la valeur recherchée
-if ma_str.endswith('17 ?'):  # recherche des derniers caractères de la str
+# Fonctions natives pour les str 
+print("\n\nLES FONCTIONS NATIVES\n")
+print(f"Type d'objet : {type(ma_str)}")
+print(f"Longueur de la str : {len(ma_str)}")
+print(f"Plus petite valeur : {min(ma_str)}")
+print(f"Plus grande valeur : {max(ma_str)}")
+print(f"N° indice de la valeur recherchée 'a' : {ma_str.index('a')}")
+print(f"Str en minuscules : {ma_str.lower()}")
+print(f"Str en majuscules : {ma_str.upper()}")
+print(f"N° d'indice de la valeur recherchée '?' : {ma_str.find('?')}")
+print(f"Recherche du caractère 'a' à partir de l'indice n° 3 : indice n° {ma_str.find('a', 3)}")
+print("Est-ce que ma chaîne de caractères se termine par '17 ?'")
+if ma_str.endswith('17 ?'): 
     print("oui oui ça finit bien par '17 ?'")
 else:
     print('euh... non... il doit y avoir quelque chose à la fin de la str...')
-ma_str = ma_str.replace("la forme 17 ?", "connard 22 !")  # remplacement d'une str
-print(ma_str)
-ma_str = ma_str.strip()  # suppression des espaces en début et en fin de la str
-print(ma_str)
-ma_str = ma_str.capitalize()  # majuscule pour la 1ère lettre de la str
-print(ma_str)
-print(ma_str.swapcase())  # inversion des majuscules et des minuscules de la str
-print(ma_str.title())  # le premier caractère de chaque mot est en majuscule
-print(ma_str.islower())  # booléen : true si la str est en minuscule
-print(ma_str.isupper())  # booléen : true si la str est en majuscule
-print(ma_str.isdigit())  # booléen : true si la str ne comprend que des chiffres
-print(ma_str.isalnum())  # booléen : true si la str ne contient que des caractères alphanumériques
-print(ma_str.isalpha())  # booléen : true si la str ne contient que des caractères alphabétiques
-for i, element in enumerate(ma_str):  # énumération des éléments de la str
+ma_str = ma_str.replace("la forme 17 ?", "John Gerald !")
+print(f"Remplacement d'une str : {ma_str}")
+print(f"Suppression des espaces en début et fin de la str : {ma_str.strip()}")
+ma_str = ma_str.strip()
+print(f"Majuscule pour la 1ère lettre de la chaîne de caractères : {ma_str.capitalize()}")
+print(f"Inversion des majuscules et des minuscules : {ma_str.swapcase()}")
+print(f"Le premier caractère de chaque mot est une majuscule : {ma_str.title()}")
+print(f"Boléen -> True si la str est en minuscule : {ma_str.islower()}")
+print(f"Boléen -> True si la str est en majuscule : {ma_str.isupper()}")
+print(f"Boléen -> True si la str n'a que des chiffres : {ma_str.isdigit()}")
+print(f"Boléen -> True si la str n'a que des caractères alphanumériques : {ma_str.isalnum()}")
+print(f"Boléen -> True si la str n'a que des caractères alphabétiques{ma_str.isalpha()}")
+for i, element in enumerate(ma_str):
     print("Pour le caractère n°", (i + 1), "l'élément est :", element)
 my_str = "Ceci/est/un/test"
-my_split = (my_str.split("/")) # séparateur : affichage en liste avec suppression du "/"
-print(my_split)
-my_new_str = "_".join(my_split) # concaténation de la liste ci-avant avec le "_"
-print(my_new_str)
+print(my_str)
+my_split = (my_str.split("/"))
+print(f"Affichage en liste avec suppression du '/' : {my_split}")
+my_new_str = "_".join(my_split)
+print(f"Concaténation de la liste ci-avant avec le '_' : {my_new_str}")
 
 """ Mise en forme """
-print("Essai 1 \nEssai 2 \nEssai 3")  # saut de page
-print("Essai 11 \tEssai 12 \tEssai 13")  # tabulation
-print("Ceci est un test :" + " 1, 2, 3 !")  # concaténation
-print("Essai !" * 5)  # répétition
-print("x" * 10, "+" * 10, "x" * 10, sep="|")  # séparateur
-print("C'est vraiment \"dommage !\"")  # guillemets dans un texte
-# les largeurs fixes :
+print("\n\nMISE EN FORME\n")
+long_t = "******************" \
+         "* Bon anniversaire ! *" \
+         "********************"
+print(f"Str sur plusieurs lignes : {long_t}")
+print("Saut de page :\nEssai 1 \nEssai 2 \nEssai 3")
+print("Tabulation :\nEssai 11 \tEssai 12 \tEssai 13")
+print("Concatenation :\nCeci est un test :" + " 1, 2, 3 !")
+print("Répétition :\nEssai !" * 5)
+print("Séparateur :\n", "x" * 10, "+" * 10, "x" * 10, sep="|")
+print("Guillemets dans un texte :\nC'est vraiment \"dommage !\"")
+print("Largeurs fixes :")
 comptes = [
  ('Apollin', 'Dupont', 127),
  ('Myrtille', 'Lamartine', 25432),
@@ -70,60 +74,57 @@ for prenom, nom, solde in comptes:
     # > : affichage à droite de la console
     print(f"{prenom:<10} -- {nom:^12} -- {solde:>8} €")
 
-def create_message(character, quote):  # fusion de deux chaînes de caractères en recourant à une fonction
-    res = "{} a dit : {}".format(character, quote)
-    return res
-
-def create_message_bis(character, quote):  # autre solution en recourant cette fois-ci à la fonction "f-strings"
-    """La fonction f_strings est préconisée compte tenu de sa simplicité par rapport à la fonction ci-avant.
-    Pour afficher un réel avec par exemple 2 décimales, il suffit d'effectuer les instructions suivantes :
-    f"{instruction}:.2f" """
-    return f"{character} a dit : {quote}"
-
-personnage = "Tyler Joseph"
-citation = "They told me I was gone"
-print(create_message(personnage, citation))
-print(create_message_bis(personnage, citation))
-
 """ Accès aux données et découpage en tranches (slicing) 
 Cours complémentaire sur les slices : https://zestedesavoir.com/tutoriels/582/les-slices-en-python/"""
-print(ma_str[:])  # affichage de toutes les composantes
-print(ma_str[0])  # accès du 1er composant du tuple
-print(ma_str[1:3])  # la composante d'indice 3 est exclue ce qui revient à ma_str[1:3[
-print(ma_str[:3])  # affichage des 3 premières composantes (indice 0 à indice 2)
-print(ma_str[3:])  # affichage de toutes les composantes sauf les 3 premières
-print(ma_str[-3:])  # affichage des 3 dernières composantes
-print(ma_str[:-3])  # affichage de toutes les composantes sauf les 3 dernières
-print(ma_str[::2])  # affichage des composantes par pas de 2
-print(ma_str[::-1])  # affichage à l'envers de toutes les composantes de la str
+print("\n\nLES SLICES\n")
+print(f"Affichage de tous les composants : {ma_str[:]}")
+print(f"Affichage du 1er composant : {ma_str[0]}")
+print(f"Affichange du composant n° 1 au n° 2 (composant n° 3 exclu):{ma_str[1:3]}")
+print(f"Affichage des 3 premiers composants : {ma_str[:3]}")
+print(f"Affichage de tous les composants sauf les 3 premiers : {ma_str[3:]}")
+print(f"Méme résultat que précédemment : {ma_str[3:-3]}")
+print(f"Affichage des 3 derniers composants : {ma_str[-3:]}")
+print(f"Affichage de tous les composants sauf les 3 derniers : {ma_str[:-3]}")
+print(f"Affichage des composants par pas de deux : {ma_str[::2]}")
+print(f"Affichage entre le 3ème composant et le 3ème en partant de la fin, par pas de 2 : {ma_str[3:-3:2]}")
+print(f"Affichage entre le 3ème en partant de la fin et le 3ème composant, par pas de 2 : {ma_str[-3:3:-2]}")
+print(f"Affichage des composants à l'envers : {ma_str[::-1]}")
 
 """ Les boucles """
-# Avec la boucle 'while'
+print("\n\nLES BOUCLES\n")
+print(f"{ma_str}\n")
+print("Avec la boucle 'while' :")
 i = 0
 while i < len(ma_str):
     print(ma_str[i])
     i += 1
 
-# Avec la boucle 'for'
+print("Avec la boucle 'for' :")
 for elements in ma_str:
     print(elements)
 
-# Avec la boucle 'for in range'
+print("Avec la boucle 'for in range' :")
 for i in range(len(ma_str)):
     print("Caractère n°", (i + 1), ":", ma_str[i])
 
 """ Conversion d'une liste, ..., en une str """
-# Conversion d'une liste den str
+print("\n\nLES CONVERSIONS\n")
+print(f"{ma_str}\n")
+
+print("Conversion d'une liste de str")
 ma_liste_bis = [2, 3.141592, 51, 561.121321, "essai"]
+print(ma_liste_bis)
 ma_str = "/".join(map(str, ma_liste_bis))
 print(ma_str)
 
-# Conversion d'un tuple en str
+print("Conversion d'un tuple en str")
 mon_tuple = ("test", "coucou", "hello !", 3.1561516, 56)
+print(mon_tuple)
 ma_str = "/".join(map(str, mon_tuple))
 print(ma_str)
 
-# Conversion d'un ensemble en str (affichage dans le désordre)
+print("Conversion d'un ensemble en str (affichage dans le désordre)")
 mon_ensemble = {"test", "coucou", "hello !", 3.1561516, 56}
+print(mon_ensemble)
 ma_str = "/".join(map(str, mon_ensemble))
 print(ma_str)
