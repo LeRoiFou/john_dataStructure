@@ -1,6 +1,14 @@
 """
 Les chaînes de caractères (str) "texte" ne sont rien d'autres que des séquences de caractères.
-On ne peut pas modifier les éléments d'une str, elle est donc immuable.
+On ne peut pas modifier les éléments d'une str, elle est donc immuable (comme pour les tuples),
+à la différence des listes qui sont mutables.
+À titre d'exemple :
+a = "cou"
+b = "cou"
+a += "cou"
+a -> "coucou"
+b -> "cou"
+La str "a" est un objet différent de la str "b"
 
 Pour connaître toutes les méthodes rattachées à une str, il suffit d'exécuter l'instruction suivante :
 print(help(str))
